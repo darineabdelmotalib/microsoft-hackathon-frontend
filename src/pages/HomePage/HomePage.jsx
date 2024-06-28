@@ -34,7 +34,10 @@ function HomePage() {
       <div className="homepage__heading">
         <p className="homepage__heading__title">Welcome to Viva Training</p>
         <div className="homepage__heading__input-container">
-          <input className="homepage__heading__input" placeholder="Search Viva Learning" />
+          <input
+            className="homepage__heading__input"
+            placeholder="Search Viva Learning"
+          />
         </div>
       </div>
 
@@ -46,9 +49,16 @@ function HomePage() {
 
         <div className="homepage__right__container">
           <div className="homepage__right">
-            <p className="homepage__right__text">Hello, I am Flippy, your personalized helper!</p>
+            <p className="homepage__right__text">
+              Hello, I am Flippy, your personalized helper!
+            </p>
           </div>
-          <button className="homepage__right__container__button" onClick={handleButton}>Start Your Training</button>
+          <button
+            className="homepage__right__container__button"
+            onClick={handleButton}
+          >
+            Start Your Training
+          </button>
         </div>
       </div>
     </section>

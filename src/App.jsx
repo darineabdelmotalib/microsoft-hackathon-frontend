@@ -1,10 +1,10 @@
-import './App.scss'
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Header from './components/Header/Header';
-import HeaderNavlinks from './components/HeaderNavlinks/HeaderNavlinks';
-import HomePage from "./pages/HomePage/HomePage"
-import TrainingStart from './pages/TrainingStart/TrainingStart';
-import Training from './pages/Training/Training';
+import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import HeaderNavlinks from "./components/HeaderNavlinks/HeaderNavlinks";
+import HomePage from "./pages/HomePage/HomePage";
+import TrainingStart from "./pages/TrainingStart/TrainingStart";
+import Training from "./pages/Training/Training";
 import TrainingInfo from "./pages/TrainingInfo/TrainingInfo";
 import VideoPage from "./pages/VideoPage/VideoPage"
 
@@ -15,6 +15,7 @@ function App() {
       <HeaderNavlinks />
 
       <Routes>
+        <Route path="*" element={<HomePage />}></Route>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/training" element={<Training />}></Route>
         <Route path="/training/start" element={<TrainingStart />}></Route>
@@ -24,7 +25,7 @@ function App() {
         
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

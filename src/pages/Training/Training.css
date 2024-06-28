@@ -1,0 +1,34 @@
+.training__right__container {
+  height: 41rem;
+  margin-bottom: 3rem;
+}
+
+.training-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.training-input__input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 24px;
+  border: none;
+  padding-left: 2rem;
+}
+.training-input__button {
+  padding: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  align-self: center;
+  background-color: #D732A8;
+  color: white;
+  border: none;
+  border-radius: 100px;
+}
+.training-input__button:hover {
+  color: #D732A8;
+  cursor: pointer;
+  background-color: white;
+}/*# sourceMappingURL=Training.css.map */
