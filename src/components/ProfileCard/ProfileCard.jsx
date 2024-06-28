@@ -1,12 +1,26 @@
 import React from "react";
 import "./ProfileCard.scss";
+import axios from "axios";
+import { useEffect} from "react";
 
 function ProfileCard() {
+
+    async function handleOnClick(event) {
+        event.preventDefault();
+        try {
+            const response = await axios.get(`http://localhost:8080/ai`);
+        } catch (error) {
+            console.log("error", error);
+        }
+
+    }
+  
+      
     return (
         <section className="profileCard">
             <div className="profileCard__top">
                 <div className="profileCard__initial">
-                    <p className="profileCard__initial__text">J</p>
+                    <p className="profileCard__initial__text" onClick={handleOnClick}>J</p>
                 </div>
                 <p className="profileCard__top__text">Joshua</p>
             </div>

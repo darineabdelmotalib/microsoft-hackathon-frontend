@@ -1,22 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Training.scss";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import InterestCard from "../../components/InterestCard/InterestCard";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Training() {
-  // State to manage the content of the ChatGPT Question
-  const [chatQuestion, setChatQuestion] = useState("ChatGPT Question");
-
-  // State to manage the input value
+  const [chatQuestion, setChatQuestion] = useState("Are you ready!?");
   const [inputValue, setInputValue] = useState("");
+  const [currentApiCall, setCurrentApiCall] = useState(0);
+  const [responses, setResponses] = useState([]);
+  const nav = useNavigate();
 
-  // Handle the submit button press
+  const endpoints = [
+    "/first",
+    "/second",
+    "/third",
+    "/forth"
+  ];
+
   const handleSubmit = () => {
-    // Update the chatQuestion state with the input value
     setChatQuestion(inputValue);
-    // Clear the input field
     setInputValue("");
+    // Trigger the next API call
+    if (currentApiCall < endpoints.length) {
+      setCurrentApiCall((prevCall) => prevCall + 1);
+    } else {
+      nav("/videos");
+    }
   };
+
+  async function fetchChatQuestion(index) {
+    try {
+      const response = await axios.get(`http://localhost:8080${endpoints[index]}`);
+      setResponses((prevResponses) => [...prevResponses, response.data]);
+      setChatQuestion(response.data);
+    } catch (error) {
+      console.log("Error fetching chat question:", error);
+    }
+  }
+
+  useEffect(() => {
+    if (currentApiCall > 0 && currentApiCall <= endpoints.length) {
+      fetchChatQuestion(currentApiCall - 1);
+    }
+  }, [currentApiCall]);
 
   return (
     <section className="homepage">

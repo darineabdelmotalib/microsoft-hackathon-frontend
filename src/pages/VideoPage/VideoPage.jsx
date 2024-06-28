@@ -1,37 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Training/Training.scss";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import InterestCard from "../../components/InterestCard/InterestCard";
-import { NavLink, useNavigate } from "react-router-dom";
-import "./TrainingStart.scss";
-import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import "../TrainingStart/TrainingStart.scss";
 import axios from "axios";
+import video from "../../assets/vid1english.mp4";
+import "./VideoPage.scss";
 
-function TrainingStart() {
-    const nav = useNavigate();
+function VideoPage() {
+  const nav = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    nav("/training")
+    nav("/training");
   };
-
-  async function initalCall() {
+/*
+  async function initialCall() {
     try {
-      const response = axios.get("http://localhost:8080/ai/training/start")
-      console.log(response.data)
-
+      const response = await axios.get("http://localhost:8080/ai/training/start");
+      console.log(response.data);
     } catch (error) {
-      console.log("error", error)
+      console.log("error", error);
     }
   }
 
   useEffect(() => {
-    initalCall
-  }, [])
-
-
-
-
+    initialCall();
+  }, []);
+*/
   return (
     <section className="homepage">
       <div className="homepage__heading">
@@ -52,24 +49,19 @@ function TrainingStart() {
 
         <div className="homepage__right__container training__right__container">
           <div className="homepage__right training__right__container">
-            <p className="homepage__right__text trainingstart__text">
-                <strong> Joshua, ConnectFirst has allocated 60 hours of training material to you.</strong> <br></br><br></br>
-                This is expected to be completed by <strong>Sept 28th 2024</strong>. My job is to make this experience enjoyable
-                and manageable for you. To make a personalized training schedule for you, I need to learn 
-                more about you! To do this, I will ask a series of questions. The more detail you give me the better 
-                I can do my job.<br></br><br></br>
-                Ready? Let's go!
-            </p>
+            <video className="homepage__right__video" controls>
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <button className="training-input__button" onClick={handleSubmit}>
-              Let's Go!
+            Let's Go!
           </button>
-
         </div>
       </div>
     </section>
   );
 }
 
-export default TrainingStart;
+export default VideoPage;
