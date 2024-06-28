@@ -1,0 +1,60 @@
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 16rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: white;
+  border: 1px solid #919191;
+  margin-left: 2rem;
+  border-radius: 24px;
+  margin-bottom: 2.5rem;
+}
+
+.profileCard__top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #919191;
+}
+
+.profileCard__initial {
+  margin-right: 1.3rem;
+  padding: 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-radius: 50%;
+  color: white;
+  font-weight: 900;
+  background-color: #D732A8;
+  border: none;
+}
+.profileCard__initial__text {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.inprogress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profileCard__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.profileCard__info__title {
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+.profileCard__info__details {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}/*# sourceMappingURL=ProfileCard.css.map */
