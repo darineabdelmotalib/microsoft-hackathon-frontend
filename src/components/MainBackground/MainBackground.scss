@@ -1,0 +1,21 @@
+.mainBackground {
+    display:flex;
+    justify-content: space-between;
+    padding:1rem;
+
+    &__title {
+        font-size: 1.7rem;
+        width: 60%;
+    }
+
+    &__input-container {
+        width: 40%;
+        display:flex;
+        align-items: center;
+    }
+
+    &__input {
+        width: 100%;
+        padding:0.5rem;
+    }
+}
