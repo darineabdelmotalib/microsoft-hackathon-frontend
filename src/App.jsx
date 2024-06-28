@@ -1,5 +1,6 @@
 import './App.scss'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import HomePage from './pages/HomePage/HomePage';
 import Header from './components/Header/Header';
 import HeaderNavlinks from './components/HeaderNavlinks/HeaderNavlinks';
 
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <HeaderNavlinks />
       <Routes>
-        
+      <Route path="/" element={ <HomePage/>}></Route>
       </Routes>
     </BrowserRouter>
   )
