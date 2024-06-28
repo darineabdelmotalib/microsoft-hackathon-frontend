@@ -5,7 +5,11 @@
     padding:1rem;
     width: 16rem;
     height:fit-content;
-    background:green;
+    background-color:white;
+    border: 1px solid  #919191;
+    margin-left: 2rem;
+    border-radius: 24px;
+    margin-bottom: 2.5rem;
 }
 
 .profileCard__top {
@@ -13,7 +17,7 @@
     flex-direction: row;
     align-items: center;
     padding-bottom: 1rem;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #919191;
 }
 
 .profileCard__initial {
@@ -22,7 +26,10 @@
     padding-top:0.6rem;
     padding-bottom: 0.6rem;
     border-radius:50%;
-    border:1px solid black;
+    color:white;
+    font-weight: 900;
+    background-color: #D732A8;
+    border:none;
 
     &__text {
         margin:0;

@@ -8,7 +8,7 @@ function ProfileCard() {
                 <div className="profileCard__initial">
                     <p className="profileCard__initial__text">J</p>
                 </div>
-                <p className="profileCard__top__text">Jiro</p>
+                <p className="profileCard__top__text">Joshua</p>
             </div>
 
             <div className="inprogress">
