@@ -1,0 +1,36 @@
+.navlinks {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0.2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    align-items: center;
+}
+
+.navlinks-left {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__text {
+        margin:0;
+        margin-right: 1rem;
+        font-size:1.1rem;
+    }
+}
+
+.navlinks-right {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__refresh {
+        margin-right: 1rem;
+    }
+
+    &__dots {
+        margin:0;
+        margin-bottom: 0.4rem;
+    }
+}
