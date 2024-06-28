@@ -9,7 +9,6 @@ function App() {
     <BrowserRouter>
       <Header />
       <HeaderNavlinks />
-      <ProfileCard />
       <Routes>
         
       </Routes>
