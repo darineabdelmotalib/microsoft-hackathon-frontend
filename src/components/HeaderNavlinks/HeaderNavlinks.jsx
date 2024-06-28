@@ -1,5 +1,6 @@
 import React from "react";
 import "./HeaderNavlinks.scss"
+import ProfileCard from "../ProfileCard/ProfileCard";
 
 function HeaderNavlinks() {
     return (
@@ -15,7 +16,6 @@ function HeaderNavlinks() {
                 <img src="#" alt="refresh icon" className="navlinks-right__refresh"></img>
                 <p className="navlinks-right__dots">...</p>
             </div>
-
         </section>
     )
 
