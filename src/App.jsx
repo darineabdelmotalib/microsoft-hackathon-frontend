@@ -1,9 +1,13 @@
 import './App.scss'
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 function App() {
   return (
-    <section>
-    </section>
+    <BrowserRouter>
+      <Routes>
+        
+      </Routes>
+    </BrowserRouter>
   )
 }
 
