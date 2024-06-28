@@ -1,0 +1,53 @@
+.interestcardContainer {
+    &__text {
+        
+    }
+}
+
+.interestcard {
+    width: 16rem;
+    padding-left:1rem;
+    padding-right: 1rem;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid grey;
+
+    &__text {
+        font-size: 0.7rem;
+    }
+}
+
+.interestButtons {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    &__button {
+        background-color: white;
+        border-radius: 20px;
+        border: 0.5px solid grey;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        padding:0.3rem;
+        padding-right: 0.8rem;
+        padding-left:0.8rem;
+    }
+}
+
+.interestcard__bottom {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    &__button {
+        background-color: grey;
+        border:none;
+        padding:0.3rem;
+        padding-right: 0.8rem;
+        padding-left:0.8rem;
+        border-radius: 5px;
+    }
+}
