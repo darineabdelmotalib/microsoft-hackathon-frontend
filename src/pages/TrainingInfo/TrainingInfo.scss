@@ -1,0 +1,42 @@
+.training__left {
+  width: 22%;
+  margin-right: 2rem;
+}
+
+.training__right__container {
+  width: 70%;
+  /* margin-right: 2rem; */
+  border-radius: 24px;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.training__first-row {
+  display: flex;
+  flex-basis: 1;
+  width: 100%;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.training__right {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #919191;
+  border-radius: 24px;
+  height: 19.5rem;
+}
+
+.training__right__text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.homepage__right__container__button {
+  margin-top: 2rem;
+}

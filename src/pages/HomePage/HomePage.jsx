@@ -2,23 +2,25 @@ import React from "react";
 import "./HomePage.scss";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import InterestCard from "../../components/InterestCard/InterestCard";
-import {useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-    const nav = useNavigate();
+  const nav = useNavigate();
 
-    function handleButton(event) {
-        event.preventDefault();
-        nav("/training/start");
-    }
-
+  function handleButton(event) {
+    event.preventDefault();
+    nav("/training/start");
+  }
 
   return (
     <section className="homepage">
       <div className="homepage__heading">
         <p className="homepage__heading__title">Welcome to Viva Training</p>
         <div className="homepage__heading__input-container">
-          <input className="homepage__heading__input" placeholder="Search Viva Learning" />
+          <input
+            className="homepage__heading__input"
+            placeholder="Search Viva Learning"
+          />
         </div>
       </div>
 
@@ -30,9 +32,16 @@ function HomePage() {
 
         <div className="homepage__right__container">
           <div className="homepage__right">
-            <p className="homepage__right__text">Hello, I am Flippy, your personalized helper!</p>
+            <p className="homepage__right__text">
+              Hello, I am Flippy, your personalized helper!
+            </p>
           </div>
-          <button className="homepage__right__container__button" onClick={handleButton}>Start Your Training</button>
+          <button
+            className="homepage__right__container__button"
+            onClick={handleButton}
+          >
+            Start Your Training
+          </button>
         </div>
       </div>
     </section>
